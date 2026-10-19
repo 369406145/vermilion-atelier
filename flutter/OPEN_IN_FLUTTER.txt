@@ -1,0 +1,14 @@
+Vermilion Atelier — Flutter
+
+Open this folder in Android Studio or VS Code with the Flutter plugin (Flutter 3.27 or newer).
+If the ios/ or android/ runners look incomplete, from this folder run:
+
+  flutter create . --project-name vermilion_atelier --org studio.vermilion
+  flutter pub get
+  flutter run
+
+Package / application id: studio.vermilion.atelier
+
+One finger draws. Two fingers pan and zoom.
+Works stay in the app's private documents. PNG export goes to Pictures/Vermilion Atelier.
+Import a photo from Cut a sheet, or from the desk while painting.
