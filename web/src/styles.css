@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #12100e;
+  --color-panel: #1c1814;
+  --color-raise: #2a241e;
+  --color-rice: #f4ecdf;
+  --color-mist: #a89880;
+  --color-cinnabar: #c44536;
+  --color-line: #3d342c;
+  --font-display: "Cormorant Garamond", Palatino, "Palatino Linotype", serif;
+  --font-sans: Outfit, "Avenir Next", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-rice);
+    font-family: var(--font-sans);
+  }
+  input,
+  button {
+    font-family: inherit;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.dock {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.sheet-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-cinnabar) 40%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-cinnabar) 40%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hue-slider {
+  appearance: none;
+  height: 0.8rem;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #ff00ff,
+    #ff0000
+  );
+}
+
+.hue-slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.15rem;
+  width: 1.15rem;
+  border-radius: 999px;
+  background: var(--color-rice);
+  border: 2px solid var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
