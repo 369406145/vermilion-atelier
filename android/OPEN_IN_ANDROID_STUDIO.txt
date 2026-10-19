@@ -1,0 +1,11 @@
+Vermilion Atelier — Android source
+Open this folder in Android Studio (Ladybug or newer).
+Let Gradle sync. The wrapper is Gradle 8.10.2, Android Gradle Plugin 8.7.3, Kotlin 2.0.21.
+Run the :app module on a device or emulator, API 26 or higher.
+
+This folder is source code. It is not a signed APK and it is not a Play Store build.
+
+Package: studio.vermilion.atelier
+Sheets are stored in the app's private files (filesDir/works).
+Download writes a PNG to Pictures/Vermilion Atelier on Android 10 and later.
+On older releases, if the gallery is not writable, the PNG is kept in the app's own pictures folder.
